@@ -22,8 +22,6 @@ python FirstFilingsToday.py [YYYY-MM-DD] [LOOKBACK_YEARS]
 ## Files
 
 - `FirstFilingsToday.py` - Main script
-- `BSE.py` - BSE India API wrapper
-- `constants.py` - Constants for BSE categories, segments, etc.
 
 ## License
 
