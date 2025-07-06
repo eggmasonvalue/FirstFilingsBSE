@@ -11,6 +11,16 @@ python FirstFilingsBSE.py [YYYY-MM-DD] [LOOKBACK_YEARS]
 - `YYYY-MM-DD`: Date to fetch announcements for (default: today)
 - `LOOKBACK_YEARS`: Number of years to look back for first filings (default: 15)
 
+Examples:
+```bash
+python FirstFilingsBSE.py
+python FirstFilingsBSE.py 2025-07-06
+python FirstFilingsBSE.py 2025-07-06 5
+```
+## Upcoming features
+- Use filings within a week, a month or a quarter from the specified date to check whether it's a first filing(currently only a single day).
+
+  
 ## Requirements
 
 - Python 3.8+
