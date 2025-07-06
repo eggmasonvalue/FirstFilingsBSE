@@ -6,7 +6,7 @@ The first investor presentation, analyst or earnings call intimation or media re
 
 ## Usage
 ```bash
-python FirstFilingsToday.py [YYYY-MM-DD] [LOOKBACK_YEARS]
+python FirstFilingsBSE.py [YYYY-MM-DD] [LOOKBACK_YEARS]
 ```
 - `YYYY-MM-DD`: Date to fetch announcements for (default: today)
 - `LOOKBACK_YEARS`: Number of years to look back for first filings (default: 15)
@@ -21,7 +21,7 @@ python FirstFilingsToday.py [YYYY-MM-DD] [LOOKBACK_YEARS]
 
 ## Files
 
-- `FirstFilingsToday.py` - Main script
+- `FirstFilingsBSE.py` - Main script
 
 ## License
 
