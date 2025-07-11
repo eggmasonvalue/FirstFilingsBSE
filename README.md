@@ -6,20 +6,64 @@ The first investor presentation, analyst or earnings call intimation or media re
 
 ## Usage
 ```bash
-python FirstFilingsBSE.py [YYYY-MM-DD] [LOOKBACK_YEARS]
+python FirstFilingsBSE.py [OPTION] [YYYY-MM-DD] [LOOKBACK_YEARS]
 ```
-- `YYYY-MM-DD`: Date to fetch announcements for (default: today)
-- `LOOKBACK_YEARS`: Number of years to look back for first filings (default: 15)
+### Options
 
-Examples:
+- `-D YYYY-MM-DD`  
+  Fetch filings for the given day only.
+
+- `-WTD YYYY-MM-DD`  
+  Fetch filings for the week-to-date (Monday to the given date, inclusive).
+
+- `-MTD YYYY-MM-DD`  
+  Fetch filings for the month-to-date (first day of the month to the given date, inclusive).
+
+- `-QTD YYYY-MM-DD`  
+  Fetch filings for the quarter-to-date (first day of the quarter to the given date, inclusive).
+
+If no option is given, the script defaults to the given date only.
+
+### Examples
+
+- Filings for a single day:
+  ```bash
+  python FirstFilingsBSE.py -D 2024-06-07
+  ```
+
+- Filings for week-to-date ending 2024-06-07:
+  ```bash
+  python FirstFilingsBSE.py -WTD 2024-06-07
+  ```
+
+- Filings for month-to-date ending 2024-06-07:
+  ```bash
+  python FirstFilingsBSE.py -MTD 2024-06-07
+  ```
+
+- Filings for quarter-to-date ending 2024-06-07:
+  ```bash
+  python FirstFilingsBSE.py -QTD 2024-06-07
+  ```
+
+- Specify lookback period (in years):
+  ```bash
+  python FirstFilingsBSE.py -WTD 2024-06-07 10
+  ```
+
+- Sample input
 ```bash
-python FirstFilingsBSE.py
-python FirstFilingsBSE.py 2025-07-06
-python FirstFilingsBSE.py 2025-07-06 5
+  python FirstFilingsBSE.py -D 2025-05-29 5
 ```
-## Upcoming features
-- Use filings within a week, a month or a quarter from the specified date to check whether it's a first filing(currently only a single day).
 
+- Sample Final Output:
+```bash
+************************************************************
+First filings in the last 5 years as on 2025-05-29:
+  Press Release        : Network People Services Technologies Ltd
+  Press Release        : Denta Water and Infra Solutions Ltd
+************************************************************
+```
   
 ## Requirements
 
