@@ -193,9 +193,9 @@ def parse_date_range(args):
     to_date = input_date
     lookback_years = 15
 
-    # Helper to parse date string
+    # Helper to parse date string (now expects DD-MM-YYYY)
     def parse_dt(s):
-        return datetime.strptime(s, "%Y-%m-%d")
+        return datetime.strptime(s, "%d-%m-%Y")
 
     # Option parsing (date is always to_date)
     if "-WTD" in args:

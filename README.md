@@ -6,20 +6,20 @@ The first investor presentation, analyst or earnings call intimation or media re
 
 ## Usage
 ```bash
-python FirstFilingsBSE.py [OPTION] [YYYY-MM-DD] [LOOKBACK_YEARS]
+python FirstFilingsBSE.py [OPTION] DD-MM-YYYY [LOOKBACK_YEARS]
 ```
 ### Options
 
-- `-D YYYY-MM-DD`  
+- `-D DD-MM-YYYY`  
   Fetch filings for the given day only.
 
-- `-WTD YYYY-MM-DD`  
+- `-WTD DD-MM-YYYY`  
   Fetch filings for the week-to-date (Monday to the given date, inclusive).
 
-- `-MTD YYYY-MM-DD`  
+- `-MTD DD-MM-YYYY`  
   Fetch filings for the month-to-date (first day of the month to the given date, inclusive).
 
-- `-QTD YYYY-MM-DD`  
+- `-QTD DD-MM-YYYY`  
   Fetch filings for the quarter-to-date (first day of the quarter to the given date, inclusive).
 
 If no option is given, the script defaults to the given date only.
@@ -28,32 +28,32 @@ If no option is given, the script defaults to the given date only.
 
 - Filings for a single day:
   ```bash
-  python FirstFilingsBSE.py -D 2024-06-07
+  python FirstFilingsBSE.py -D 07-06-2024
   ```
 
-- Filings for week-to-date ending 2024-06-07:
+- Filings for week-to-date ending 07-06-2024:
   ```bash
-  python FirstFilingsBSE.py -WTD 2024-06-07
+  python FirstFilingsBSE.py -WTD 07-06-2024
   ```
 
-- Filings for month-to-date ending 2024-06-07:
+- Filings for month-to-date ending 07-06-2024:
   ```bash
-  python FirstFilingsBSE.py -MTD 2024-06-07
+  python FirstFilingsBSE.py -MTD 07-06-2024
   ```
 
-- Filings for quarter-to-date ending 2024-06-07:
+- Filings for quarter-to-date ending 07-06-2024:
   ```bash
-  python FirstFilingsBSE.py -QTD 2024-06-07
+  python FirstFilingsBSE.py -QTD 07-06-2024
   ```
 
 - Specify lookback period (in years):
   ```bash
-  python FirstFilingsBSE.py -WTD 2024-06-07 10
+  python FirstFilingsBSE.py -WTD 07-06-2024 10
   ```
 
 - Sample input
 ```bash
-  python FirstFilingsBSE.py -D 2025-05-29 5
+  python FirstFilingsBSE.py -D 29-05-2025 5
 ```
 
 - Sample Final Output:
