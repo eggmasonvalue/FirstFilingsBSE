@@ -267,7 +267,11 @@ def main():
 
     # Highlighted output
     print("\n" + "*" * 80)
-    print("First filings in the last {} years as on {}:".format(lookback_years, to_date.strftime('%Y-%m-%d')))
+    print("First filings in the last {} years for range {} to {}:".format(
+        lookback_years,
+        from_date.strftime('%Y-%m-%d'),
+        to_date.strftime('%Y-%m-%d')
+    ))
     if first_filings:
         for subcat_label, names in first_filings.items():
             for name in names:
